@@ -1,0 +1,355 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Jobs | Hypixel - Minecraft Server and Maps</title>
+
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <!--
+            <link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style=72&amp;dir=LTR&amp;d=1483603930">
+        -->
+        <link rel="stylesheet" href="css.php?css=uix,&amp;style=72&amp;dir=LTR&amp;d=1483603930">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Neuton:200,300,400,700,400italic|Open+Sans:400,700|Lato:400,700" rel="stylesheet" type="text/css">
+
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div id="loginBar">
+            <div class="pageContent">
+                <span class="helper"></span>
+                <form action="login/login" method="post" class="xenForm " id="login" style="display:none">
+                    <div class="ctrlWrapper">
+                        <dl class="ctrlUnit">
+                            <dt><label for="LoginControl">Your name or email address:</label></dt>
+                            <dd><input type="text" name="login" id="LoginControl" class="textCtrl" tabindex="101"></dd>
+                        </dl>
+                        <dl class="ctrlUnit">
+                            <dt>
+                                <label for="ctrl_password">Do you already have an account?</label>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li><label for="ctrl_not_registered"><input type="radio" name="register" value="1" id="ctrl_not_registered" tabindex="105">
+                                    No, create an account now.</label></li>
+                                    <li><label for="ctrl_registered"><input type="radio" name="register" value="0" id="ctrl_registered" tabindex="105" checked="checked" class="Disabler">
+                                    Yes, my password is:</label></li>
+                                    <li id="ctrl_registered_Disabler">
+                                    <input type="password" name="password" class="textCtrl" id="ctrl_password" tabindex="102">
+                                    <div class="lostPassword"><a href="lost-password/" class="OverlayTrigger OverlayCloser" tabindex="106">Forgot your password?</a></div>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="ctrlUnit submitUnit">
+                            <dt></dt>
+                            <dd>
+                                <input type="submit" class="button primary" value="Log in" tabindex="104" data-loginphrase="Log in" data-signupphrase="Sign up">
+                                <label for="ctrl_remember" class="rememberPassword"><input type="checkbox" name="remember" value="1" id="ctrl_remember" tabindex="103"> Stay logged in</label>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="uix_paneContainer" class="off-canvas-wrapper">
+            <aside class="uix_sidePane left-off-canvas-content">
+                <div class="uix_sidePane_content">
+                    <ul>
+                        <li class="navTab home ">
+                            <a href="/" class="navLink">Home</a>
+                        </li>
+                        <li class="navTab downloads ">
+                            <a href="downloads/" class="navLink">Downloads</a>
+                        </li>
+                        <li class="navTab games ">
+                            <a href="games/" class="navLink">Games</a>
+                        </li>
+                        <li class="navTab players ">
+                            <a href="players/" class="navLink">Leaderboards</a>
+                        </li>
+
+                        <li class="navTab support ">
+                            <a href="http://support.hypixel.net/" class="navLink">Support</a>
+                        </li>
+                        <li class="navTab store ">
+                            <a href="http://store.hypixel.net/" class="navLink">PC Store</a>
+                        </li>
+                        <li class="navTab navTabPlayNow">
+                            <a href="play/" class="navLink">Play Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="inner-wrapper">
+                <a href="#" class="exit-off-canvas"></a>
+                <div class="uix_wrapperFix" style="height: 1px; margin-bottom: -1px;"></div>
+                <div id="uix_wrapper">
+                    <div id="headerMover">
+                        <div id="headerProxy"></div>
+
+                        <header>
+                            <div id="header" class="">
+                                <div id="headerStripe" style="height: 114px;margin-top:288px !important;"></div>
+                                <div id="headerFix">
+                                    <div id="userBar" class="">
+                                        <div class="pageContent noBorderRadiusBottom noBorderRadius">
+                                            <div class="navTabs">
+                                                <div class="pageWidth">
+                                                    <ul class="visitorTabs right">
+                                                        <li class="navTab login PopupClosed">
+                                                            <label>
+                                                                <a href="login/" class="navLink OverlayTrigger">
+                                                                    <i class="uix_icon uix_icon-signIn"></i>
+                                                                    <strong class="loginText">Log in</strong>
+                                                                </a>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <span class="helper"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="logoBlock">
+                                        <div class="pageWidth">
+                                            <div class="pageContent noBorderRadiusTop">
+                                                <div id="logo">
+                                                    <a href="/">
+                                                        <span></span>
+                                                        <img src="styles/hypixel-uix/hypixel/logo2.png" alt="Hypixel - Minecraft Server and Maps">
+                                                    </a>
+                                                </div>
+                                                <div id="playNowWrapper">
+                                                    <div id="playNowCount">
+                                                    Join <b>10,587</b> other online Players!
+                                                    </div>
+                                                    <a href="play/">
+                                                        <i class="icon"></i>
+                                                        <span>Play Now<em><strong id="playerCount">10,587</strong> Players Online</em></span>
+                                                    </a>
+                                                    <div id="playNowIp">
+                                                        <span class="explain">Server IP ۠</span><span class="ip copyIp" data-clipboard-text="mc.hypixel.net">mc.hypixel.net</span>
+                                                        <div class="ipCopyInfo">Click to Copy!</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hypixelIpOuter" style="display: none;">
+                                                    <div class="hypixelIp"><span id="playerCount2">10,587</span> Players Online<br><span class="bigIp">mc.hypixel.net</span></div>
+                                                </div>
+                                                <span class="helper"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="navigation" class=" ">
+                                        <div class="uix_navigationWrapper">
+                                            <div class="pageWidth">
+                                                <div class="pageContent">
+                                                    <nav>
+                                                        <div class="navTabs">
+                                                            <ul class="publicTabs">
+                                                                <li class="navTab home PopupClosed">
+                                                                    <a href="/" class="navLink">Home</a>
+                                                                </li>
+                                                                <li class="navTab games PopupClosed">
+                                                                    <a href="games/" class="navLink">Games</a>
+                                                                </li>
+                                                                <li class="navTab players PopupClosed">
+                                                                    <a href="players/" class="navLink">Leaderboards</a>
+                                                                </li>
+                                                                <li class="navTab forums  Popup PopupControl PopupClosed PopupContainerControl">
+                                                                    <a href="https://hypixel.net/forums/" class="SplitCtrl" rel="Menu"></a>
+                                                                    <a href="https://hypixel.net/forums/" class="navLink">Forums</a>
+                                                                </li>
+                                                                <li class="navTab support  PopupClosed">
+                                                                    <a href="http://support.hypixel.net/" class="navLink">Support</a>
+                                                                </li>
+                                                                <li class="navTab store  PopupClosed">
+                                                                    <a href="http://store.hypixel.net/" class="navLink"><i class="menu-store-icon"></i> PC Store</a>
+                                                                </li>
+
+                                                                <li class="navTab navigationHiddenTabs Popup PopupControl PopupClosed PopupContainerControl" style="display: none;">
+                                                                    <a rel="Menu" class="navLink NoPopupGadget"><i class="uix_icon uix_icon-navTrigger"></i><span class="uix_hide menuIcon">Menu</span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <span class="helper"></span>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div id="content" class="hypixel_jobs">
+                            <div class="pageWidth">
+                                <div class="pageContent">
+                                    <div class="mainContainer_noSidebar">
+                                        <div class="jobsContent">
+                                            <img src="https://hypixel.net/styles/hypixel-uix/hypixel/game-art/MegaWalls.png" class="job-image">
+                                            <p>Hypixel consists of a team that contribute &amp; collaborate remotely from around the world, with members ranging from games industry newcomers to 15+ year veterans. The staff have a diverse set of backgrounds, but share a common passion for games and ensuring that our players are happy.</p>
+                                            <p>What started originally as an adventure map server has in essence become its own game studio. Work has commenced on our own standalone titles, so be aware that your application could see you either working on the Minecraft Server or one of our top secret new projects.</p>
+                                            <p>We are currently 40+ Strong, and we cover all of the traditional roles of game development. Art, Programming, Production, Design and so on. The three key qualities we look for in applicants are</p>
+                                            <ul class="htmlList cool-list">
+                                                <li>Driven</li>
+                                                <li>history of doing cool stuff</li>
+                                                <li>about Players</li>
+                                            </ul>
+                                            <h2 class="contentHeadline" style="margin-top: 17px;">A few Stats</h2>
+                                            <ul class="companyStats">
+                                                <li class="s1">
+                                                    <b>52k+</b>
+                                                    <em>Concurrent Players</em>
+                                                </li>
+                                                <li class="s2">
+                                                    <b>737K+</b>
+                                                    <em>Daily Unique Logins</em>
+                                                </li>
+                                                <li class="s1">
+                                                    <b>9M+</b>
+                                                    <em>Total Unique Logins</em>
+                                                </li>
+                                                <li class="s2">
+                                                    <b>450K+</b>
+                                                    <em>YouTube Subscribers</em>
+                                                </li>
+                                                <li class="s1">
+                                                    <b>110K+</b>
+                                                    <em>Twitter Followers</em>
+                                                </li>
+                                                <li class="s2">
+                                                    <b>900K+</b>
+                                                    <em>Facebook Likes</em>
+                                                </li>
+                                                <li class="s1">
+                                                    <b>80K+</b>
+                                                    <em>Daily Unique Forum Visitors</em>
+                                                </li>
+                                            </ul>
+
+                                            <h2 class="contentHeadline">Some Tips before applying.</h2>
+                                            <img src="https://hypixel.net/styles/hypixel-uix/hypixel/feature-art/guilds.png" class="tips-image">
+                                            <p>Show us what youӶe done relevant to the area in which you are applying, you can do this via YouTube videos, screenshots, websites, links to GitHub. We will not compile and run any code examples for initial review of applicants.</p>
+                                            <p>Failing to get a response unfortunately means we are not interested in pursuing this application. Due to the high volume of applicants we canӴ reply to each by hand.</p>
+                                            <p>Think of an application like an elevator pitch for yourself, keep it short, snappy and provide the wow factor up front! An example of a bad application is where you say ԣontact me if youӤ like to see examples of my work.</p>
+                                            <div style="background: #eee;padding: 13px 32px;padding-bottom: 15px;margin-bottom: 15px;">
+                                                <h2 class="contentHeadline">Volunteer Team Openings</h2>
+                                                <p>For Applications to our Volunteer Helper Program please find more information <a href="http://hypixel.net/forums/staff-application.40/">here</a>.</p>
+                                            </div>
+                                            <p>We are currently hiring for the positions listed below, please note that even if no relevant position is listed, we are always looking for talented people and we read every application. A strong application can open doors!</p>
+
+                                            <h2 class="contentHeadline">Current Job Openings</h2>
+                                            <div class="jobOpening">
+                                                <h3>Full Stack Web Developer (Full Time)</h3>
+                                                <p>Standalone Game Project</p>
+                                                <h4>Desired Traits</h4>
+                                                <ul class="contentList">
+                                                    <li>Experience with Front-End Development (HTML, CSS, JS)</li>
+                                                    <li>Experience with Node.js Back-End Development</li>
+                                                    <li>Team Player</li>
+                                                    <li>Be able to work without direct (or better yet any) sort of management - We have a manager free culture!</li>
+                                                    <li>Be unafraid of challenges</li>
+                                                    <li>A good eye for design is a plus</li>
+                                                </ul>
+                                                <p>Apply via jobs@hypixel.net</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <div id="uix_footer_columns">
+                            <div class="pageContent noBorderRadius">
+                                <div class="pageWidth">
+                                    <ul class="uix_footer_columns_container uix_footer_columns_4">
+                                        <li class="uix_footer_columns_col1">
+                                            <div class="uix_footer_columnWrapper">
+                                                <h3>
+                                                <i class="uix_icon fa fa-caret-square-o-right"></i>
+                                                About Us
+                                                </h3>
+                                                Starting out as a YouTube channel making Minecraft Adventure Maps, Hypixel is now one of the largest and highest quality Minecraft Server Networks in the world, featuring original games such as The Walls, Mega Walls, Blitz Survival Games, and many more!
+                                            </div>
+                                        </li>
+                                        <li class="uix_footer_columns_col2">
+                                            <div class="uix_footer_columnWrapper">
+                                                <h3>
+                                                    <i class="uix_icon fa fa-info-circle"></i>
+                                                    Useful Links
+                                                </h3>
+                                                <ul class="footerMenu">
+                                                    <li><a href="/">Home</a></li>
+                                                    <li><a href="http://support.hypixel.net">Support</a></li>
+                                                    <li><a href="/jobs/">Jobs</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="uix_footer_columns_col3">
+                                            <div class="uix_footer_columnWrapper">
+                                                <h3>
+                                                    <i class="uix_icon fa fa-facebook-square"></i>
+                                                    Like us on Facebook
+                                                </h3>
+                                            </div>
+                                        </li>
+                                        <li class="uix_footer_columns_col4">
+                                            <div class="uix_footer_columnWrapper">
+                                                <h3>
+                                                    <i class="uix_icon fa fa-shopping-cart"></i>
+                                                    Hypixel Store
+                                                </h3>
+
+                                                The administration works very hard to bring you unique, originally created content. Purchasing ranks, boosters, and mystery boxes helps support us in making more, higher quality content.
+                                                <br><br>
+                                                <a class="callToAction" href="http://store.hypixel.net/"><span>Visit the store</span></a>
+                                                <ul class="uix_socialMediaLinks">
+                                                    <li class="facebook"><a href="https://www.facebook.com/Hypixel" target="_blank"><i class="uix_icon uix_icon-facebook"></i></a></li>
+                                                    <li class="twitter"><a href="https://twitter.com/Hypixel" target="_blank"><i class="uix_icon uix_icon-twitter"></i></a></li>
+                                                    <li class="youtube"><a href="https://www.youtube.com/user/Hypixel" target="_blank"><i class="uix_icon uix_icon-youtube"></i></a></li>
+                                                    <li class="contact"><a href="http://support.hypixel.net/" target="_blank"><i class="uix_icon uix_icon-email"></i></a></li>
+                                                    <li class="rss"><a href="forums/-/index.rss" rel="alternate" target="_blank"><i class="uix_icon uix_icon-rss"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyrightFooter">
+                            <div class="pageWidth">
+                                2016 Hypixel Inc. All Rights Reserved.
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+
+                <div class="uix_wrapperFix" style="height: 1px; margin-top: -1px;"></div>
+            </div>
+        </div>
+
+        <div class="Menu JsOnly tabMenu forumsTabLinks" id="XenForoUniq0">
+            <div class="primaryContent menuHeader">
+                <h3>Forums</h3>
+                <div class="muted">Quick Links</div>
+            </div>
+            <ul class="secondaryContent blockLinksList">
+                <li><a href="find-new/posts" rel="nofollow">Recent Posts</a></li>
+            </ul>
+        </div>
+        <div class="Menu JsOnly blockLinksList primaryContent" id="NavigationHiddenMenu"></div>
+        <div class="Menu" id="XenForoUniq1">
+            <div class="primaryContent menuHeader">
+                <h3>Useful Searches</h3>
+            </div>
+            <ul class="secondaryContent blockLinksList">
+                <li><a href="find-new/posts?recent=1" rel="nofollow">Recent Posts</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
